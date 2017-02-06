@@ -6,4 +6,14 @@ import css from './static/styles/style.styl'
 
 import Main from './components/Main';
 
-render(<Main />, document.getElementById('root'))
+////// import react router dependecies
+
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+
+const router = (
+	<Router history={browserHistory}>
+		<Route path ='/' component={Main}></Route>
+	</Router>
+)
+
+render(router, document.getElementById('root'))
